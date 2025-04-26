@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha</title>
+    <!-- Ícone para aparecer na barra de título -->
+    <!-- <link rel="icon" type="image/png" href="images/jogo-da-velha.png"> -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Importação da biblioteca jQuery -->
+    <script src="lib/jquery-3.7.1.min.js"></script>
+    <!-- Importação do TailwindCSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="shortcut icon" href="images/jogo-da-velha.png" type="image/x-icon">
+
+
+</head>
+
+<body class="m-2">
+    <h1 class="text-center font-bold text-xl uppercase">Jogo da Velha</h1>
+    <div id="pagina-inicial" class="flex justify-center align-center mt-10">
+        <table class="border-0" width="600px;">
+            <tbody>
+                <tr>
+                    <td class="content-center items-center">
+                        <img class="m-auto" src="images/jogador_1.png" />
+                        <br />
+                        <input id="entrada-apelido-jogador-1" type="text" maxlength="10" placeholder="Apelido jogador 1"
+                            class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+                            id="inline-full-name" />
+                    </td>
+                    <td class="content-center items-center">
+                        <img class="m-auto" id="btn-iniciar-jogo" src="images/iniciar.png" />
+                    </td>
+                    <td class="content-center items-center">
+                        <img class="m-auto" src="images/jogador_2.png" />
+                        <br />
+                        <input id="entrada-apelido-jogador-2" type="text" maxlength="10" placeholder="Apelido jogador 2"
+                            class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+                            id="inline-full-name" />
+                    </td>
+                </tr>
+        </table>
+        </table>
+    </div>
+
+    <div id="palco-jogo" class="mt-10 text-center hidden">
+        <div class="inline-block">
+            <img src="images/jogador_1.png" />
+            <br />
+            <span id="nome-jogador-1"></span>
+        </div>
+
+        <div class="inline-block">
+            <table class="border-none">
+                <tr>
+                    <td class="cell-left">
+                        <div class="jogada cell-size" id="a-1"></div>
+                    </td>
+                    <td class="cell-middle">
+                        <div class="jogada cell-size" id="a-2"></div>
+                    </td>
+                    <td class="cell-right">
+                        <div class="jogada cell-size" id="a-3"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="cell-left">
+                        <div class="jogada cell-size" id="b-1"></div>
+                    </td>
+                    <td class="cell-middle">
+                        <div class="jogada cell-size" id="b-2"></div>
+                    </td>
+                    <td class="cell-right">
+                        <div class="jogada cell-size" id="b-3"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="cell-bottom-left">
+                        <div class="jogada cell-size" id="c-1"></div>
+                    </td>
+                    <td class="cell-bottom-middle">
+                        <div class="jogada cell-size" id="c-2"></div>
+                    </td>
+                    <td>
+                        <div class="jogada cell-size" id="c-3"></div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+
+        <div class="inline-block">
+            <img src="images/jogador_2.png" />
+            <br />
+            <span id="nome-jogador-2"></span>
+        </div>
+
+        <!-- NOVO BLOCO: vez do jogador -->
+        <div id="vez-jogador" class="text-lg font-semibold mt-4">Vez de </div>
+
+        <button id="btn-reiniciar">
+            <img src="images/reiniciar.png" alt="Reiniciar Jogo" class="m-auto mt-4 img-reiniciar" />
+        </button>
+    </div>
+
+    
+
+    <!-- Importação do arquivo JS -->
+    <script src="javascript/jogo.js"></script>
+    <!-- Importação do SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+
+
+</html>

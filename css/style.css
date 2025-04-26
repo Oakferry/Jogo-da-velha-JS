@@ -1,0 +1,41 @@
+.cell-left {
+    border-bottom: solid 1px red; 
+    border-right:solid 1px red;
+}
+
+.cell-middle {
+    border-bottom: solid 1px red; 
+    border-right:solid 1px red;
+}
+
+.cell-right {
+    border-bottom: solid 1px red;
+}
+
+.cell-bottom-left {
+    border-right: solid 1px red;
+}
+
+.cell-bottom-middle {
+    border-right: solid 1px red;
+}
+
+.cell-size {
+    width:100px; 
+    height:100px;
+}
+
+#btn-iniciar-jogo:hover{
+    cursor: pointer;   
+    padding: 4px;
+    transition: 0.5s;
+    transform: scale(1.2);
+}
+
+#btn-reiniciar:hover img {
+    cursor: pointer;   
+    padding: 4px;
+    transition: 0.5s;
+    transform: scale(1.1);
+
+}
